@@ -11,7 +11,31 @@ export const routes: Routes = [
         canActivate: [MaintenanceGuard],
     },
     {
-        path: 'maintenance',
+        path: 'bordados',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'cursos',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'riscos-para-bordar',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'decoracao',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'materiais',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'sobre',
+        component: MaintenanceComponent,
+    },
+    {
+        path: 'contato',
         component: MaintenanceComponent,
     },
     {
