@@ -1,0 +1,263 @@
+header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #e4cbb1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    z-index: 3; /*Layer number*/
+}
+.band {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #ebd8c3;
+    height: 28px;
+    width: 100%;
+    z-index: 0; /*Layer number*/
+}
+.band p {
+    position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: auto;
+}
+.buttons {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: 35px;
+
+    margin-right: 1%;
+}
+
+.button {
+    display: flex;
+    position: relative;
+    padding: 5px 20px;
+    background-color: #ebd8c3;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 80px;
+    transition: all 0.5s ease-in-out;
+    width: 5px;
+}
+/* Icon styles */
+.icon-instagram {
+    color: #ffffff;
+}
+.icon-pinterest {
+    color: #ffffff;
+}
+.icon-whatsapp {
+    color: #ffffff;
+}
+.icon-email {
+    color: #ffffff;
+}
+.logo-mobile {
+    display: none;
+}
+.button:hover {
+    cursor: pointer;
+    border-radius: 25px;
+    width: 10px;
+    font-size: 20px;
+}
+
+.logo-title-search {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto 120px;
+    text-decoration: none;
+    z-index: 1; /*Layer number*/
+    width: 100px;
+}
+.mini-logo {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; /*Layer number*/
+}
+.logo-title .frutos {
+    position: relative;
+    top: 0px;
+    left: 0;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    z-index: 1; /*Layer number*/
+}
+.logo-title .feito-a-mao {
+    position: relative;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1; /*Layer number*/
+}
+/* here the input and the loupe of the form are styled*/
+#searchForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 45%;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-control {
+    height: 50px;
+    padding-right: 48px; /* loupe space*/
+}
+
+#loupe {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ebd8c3;
+    font-size: 24px;
+    cursor: pointer;
+}
+.menu-icon {
+    display: none;
+    position: relative;
+    margin: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f8f5ed;
+    z-index: 1; /*Layer number*/
+}
+.line {
+    position: relative;
+    width: 100%;
+    background-color: #ebd8c3;
+    height: 2px;
+    top: 0%;
+    z-index: 0; /*Layer number*/
+    margin-bottom: 10px;
+}
+header nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* align itens horizontally */
+    align-items: center; /* align itens vertically */
+    z-index: 1; /*Layer number*/
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 'normal';
+    z-index: 1; /*Layer number*/
+}
+nav a:hover {
+    color: #e7bb78;
+}
+/* Media queries */
+@media (max-width: 768px) {
+    .band {
+        height: 50px;
+    }
+    .band p {
+        position: relative;
+        color: #f8f5ed;
+        font-size: small;
+        font-weight: bolder;
+        top: 10%;
+        left: 0%;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 50%;
+        background-color: #e4cbb1;
+    }
+
+    nav a {
+        padding: 15px;
+        text-align: center;
+        color: #f8f5ed;
+        border-bottom: 1px solid #f8f5ed;
+    }
+    .show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    .logo-title {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+        position: fixed;
+        left: 42%;
+        top: 55px;
+        height: 80px;
+        z-index: 4; /*layer number*/
+    }
+    #searchForm {
+        top: 120px;
+        width: 90%;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .buttons {
+        display: none;
+    }
+    .buttons-offset {
+        display: flex;
+        position: absolute;
+        top: 1%;
+        left: 8%;
+        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+    }
+    .button-offset {
+        display: flex;
+        position: relative;
+        margin: 0px;
+        padding: 5px 20px;
+        font-size: 15px;
+        text-decoration: none;
+        border-radius: 80px;
+        transition: all 0.5s ease-in-out;
+        width: 5px;
+        right: 20px;
+    }
+}
