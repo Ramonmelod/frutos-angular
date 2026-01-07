@@ -14,7 +14,7 @@ import { expect } from '@jest/globals'
 import { AppComponent } from '../../../app.component'
 import { FooterComponent } from '../../../shared/components/footer/footer.component'
 import { MenuComponent } from '../../../shared/components/menu/menu.component'
-import { MaintenanceComponent } from '../../../features/materiais/materiais.component'
+import { MaintenanceComponent } from '../../../features/maintenance/maintenance.component'
 import { routes } from '../../../app.routes'
 
 describe('MaintenanceGuard', () => {

@@ -3,6 +3,7 @@ import { ErrorComponent } from './features/error/error.component'
 import { HomeComponent } from './features/home/home.component'
 import { MateriaisComponent } from './features/materiais/materiais.component'
 import { MaintenanceGuard } from './core/guards/maintenance/maintenance.guard'
+import { MaintenanceComponent } from './features/maintenance/maintenance.component'
 
 export const routes: Routes = [
     {
@@ -44,6 +45,10 @@ export const routes: Routes = [
         path: 'contato',
         component: HomeComponent,
         canActivate: [MaintenanceGuard],
+    },
+    {
+        path: 'maintenance',
+        component: MaintenanceComponent,
     },
     {
         path: 'error',
