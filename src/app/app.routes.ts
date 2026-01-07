@@ -4,6 +4,7 @@ import { HomeComponent } from './features/home/home.component'
 import { MateriaisComponent } from './features/materiais/materiais.component'
 import { MaintenanceGuard } from './core/guards/maintenance/maintenance.guard'
 import { MaintenanceComponent } from './features/maintenance/maintenance.component'
+import { BordadosComponent } from './features/bordados/bordados.component'
 
 export const routes: Routes = [
     {
@@ -13,7 +14,7 @@ export const routes: Routes = [
     },
     {
         path: 'bordados',
-        component: HomeComponent,
+        component: BordadosComponent,
         canActivate: [MaintenanceGuard],
     },
     {
