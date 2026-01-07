@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router'
 import { ErrorComponent } from './features/error/error.component'
 import { HomeComponent } from './features/home/home.component'
-import { MaintenanceComponent } from './features/maintenance/maintenance.component'
+import { MateriaisComponent } from './features/materiais/materiais.component'
 import { MaintenanceGuard } from './core/guards/maintenance/maintenance.guard'
 
 export const routes: Routes = [
@@ -12,31 +12,38 @@ export const routes: Routes = [
     },
     {
         path: 'bordados',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'cursos',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'riscos-para-bordar',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'decoracao',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'materiais',
-        component: MaintenanceComponent,
+        component: MateriaisComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'sobre',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'contato',
-        component: MaintenanceComponent,
+        component: HomeComponent,
+        canActivate: [MaintenanceGuard],
     },
     {
         path: 'error',

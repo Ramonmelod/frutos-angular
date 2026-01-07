@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+
+import { MateriaisComponent } from './materiais.component'
+
+describe('MateriaisComponent', () => {
+    console.log('MaintenanceComponent test - INIT')
+    let component: MateriaisComponent
+    let fixture: ComponentFixture<MateriaisComponent>
+
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [MateriaisComponent],
+        }).compileComponents()
+
+        fixture = TestBed.createComponent(MateriaisComponent)
+        component = fixture.componentInstance
+        fixture.detectChanges()
+    })
+
+    it('should create', () => {
+        console.log('MateriaisComponent - should create')
+        expect(component).toBeTruthy()
+    })
+    console.log('MateriaisComponent test - STOP')
+})

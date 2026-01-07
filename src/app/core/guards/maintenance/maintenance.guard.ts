@@ -6,7 +6,7 @@ export const MaintenanceGuard: CanActivateFn = () => {
 
     if (!siteStatusService.getIsSiteOnline()) {
         const router = new Router() // Certifique-se de ajustar a criação do router conforme sua configuração de injeção de dependência
-        router.navigate(['/maintenance'])
+        router.navigate(['/maintenance']) //need to implement the maintenance page
         return false
     }
     return true
