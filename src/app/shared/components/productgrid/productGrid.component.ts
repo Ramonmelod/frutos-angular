@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { OnInit } from '@angular/core'
 
 @Component({
     selector: 'app-productgrid',
@@ -8,4 +9,8 @@ import { CommonModule } from '@angular/common'
     templateUrl: './productGrid.component.html',
     styleUrl: './productGrid.component.scss',
 })
-export class ProductGridComponent {}
+export class ProductGridComponent implements OnInit {
+    ngOnInit() {
+        console.log('ProductGridComponent: ngOnInit')
+    }
+}
