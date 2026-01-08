@@ -18,10 +18,9 @@ export class ProductGridComponent implements OnInit {
         this.productService.getProducts().subscribe({
             next: products => {
                 this.products = products
-                console.log('Products loaded:', products)
             },
             error: err => {
-                console.error('Error loading products', err)
+                console.error('ProductGrid error:', err)
             },
         })
     }

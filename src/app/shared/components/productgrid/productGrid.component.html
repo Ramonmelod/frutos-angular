@@ -1,1 +1,22 @@
-<a>productGrid</a>
+<section class="product-grid">
+    <article class="product-grid-card" *ngFor="let product of products">
+        <a
+            [href]="
+                product.detailsPage +
+                '?productId=' +
+                product.id +
+                '&imageIndex=0'
+            "
+            style="text-decoration: none">
+            <img [src]="product.image_url[0]" [alt]="product.title" />
+        </a>
+
+        <p class="product-grid-title">
+            {{ product.title }}
+        </p>
+
+        <p class="product-grid-price">
+            {{ product.price }}
+        </p>
+    </article>
+</section>
