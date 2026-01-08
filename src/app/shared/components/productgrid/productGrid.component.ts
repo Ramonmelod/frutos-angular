@@ -1,16 +1,28 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { OnInit } from '@angular/core'
+import { ProductService, Product } from '../../../core/services/product.service'
 
 @Component({
     selector: 'app-productgrid',
     standalone: true,
     imports: [CommonModule],
     templateUrl: './productGrid.component.html',
-    styleUrl: './productGrid.component.scss',
+    styleUrls: ['./productGrid.component.scss'],
 })
 export class ProductGridComponent implements OnInit {
-    ngOnInit() {
-        console.log('ProductGridComponent: ngOnInit')
+    products: Product[] = []
+
+    constructor(private productService: ProductService) {}
+
+    ngOnInit(): void {
+        this.productService.getProducts().subscribe({
+            next: products => {
+                this.products = products
+                console.log('Products loaded:', products)
+            },
+            error: err => {
+                console.error('Error loading products', err)
+            },
+        })
     }
 }

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductGridComponent } from './productGrid.component'
+import { provideHttpClient } from '@angular/common/http'
 
 describe('ProductGridComponent', () => {
     console.log('ProductGridComponent test - INIT')
@@ -9,6 +10,7 @@ describe('ProductGridComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ProductGridComponent],
+            providers: [provideHttpClient()],
         }).compileComponents()
 
         fixture = TestBed.createComponent(ProductGridComponent)
