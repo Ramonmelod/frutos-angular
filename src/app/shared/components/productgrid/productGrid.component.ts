@@ -12,9 +12,10 @@ import { ProductService, Product } from '../../../core/services/product.service'
 export class ProductGridComponent implements OnInit {
     products: Product[] = []
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService) {} //this.productService = productService;
 
     ngOnInit(): void {
+        this.productService.setProductsUrl('/assets/data/bordados-list.json')
         this.productService.getProducts().subscribe({
             next: products => {
                 this.products = products

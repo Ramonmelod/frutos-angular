@@ -15,11 +15,16 @@ export interface Product {
     providedIn: 'root',
 })
 export class ProductService {
-    private readonly productsUrl = '/assets/data/bordados-list.json'
+    private productsUrl: string = ''
 
-    constructor(private http: HttpClient) {} // this.http = http
+    constructor(private http: HttpClient) {
+        // this.http = http
+    }
 
     getProducts(): Observable<Product[]> {
         return this.http.get<Product[]>(this.productsUrl)
+    }
+    setProductsUrl(productUrl: string): void {
+        this.productsUrl = productUrl
     }
 }
